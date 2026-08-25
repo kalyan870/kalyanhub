@@ -85,6 +85,10 @@ Selected posts include **Generative AI Workshop completed**, **Google Cloud Gen 
 - [Claude 101](https://drive.google.com/file/d/1FHWuwwUM8QmvwS6w9W6MROI9Kd5lU-vK/view?usp=drivesdk) — Anthropic
 - [AI Masterclass](https://drive.google.com/file/d/1D5N83OcCowYj0BwTt3RWjFwKpxiiLrwO/view?usp=drivesdk) — Freedom With AI
 
+## Demo
+
+https://github.com/kalyan870/kalyanhub/blob/main/KalyanHub-demo.mp4
+
 ## Visual overview
 
 ```mermaid
