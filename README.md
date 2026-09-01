@@ -63,6 +63,119 @@ Developed an AI-powered face recognition application using PCA, ANN, Python, Str
 | **Codebase Knowledge AI** | Explains architecture, dependencies, and repository behavior through search. | [GitHub](https://github.com/kalyan870/codebase-knowledge-ai) |
 | **Full-stack Communication App** | Real-time communication with secure authentication and live chat. | [GitHub](https://github.com/kalyan870/code-alpha-Real-time-communication-app) |
 | **JobHunt** | Job discovery and opportunity management web product. | [GitHub](https://github.com/kalyan870/jobhunt) |
+| **InterviewIQ AI** | AI-powered interview preparation platform with voice interviews, resume analysis, project defense, and performance analytics. | [GitHub](https://github.com/kalyan870/InterviewIQ-AI) · [Live Demo](https://ai-mock-interview-pj03qbplx-kalyan870s-projects.vercel.app/) |
+
+## InterviewIQ AI — AI-Powered Interview Preparation Platform
+
+**Live Demo:** [https://ai-mock-interview-pj03qbplx-kalyan870s-projects.vercel.app/](https://ai-mock-interview-pj03qbplx-kalyan870s-projects.vercel.app/)
+
+InterviewIQ AI is a full-stack AI interview preparation platform designed to simulate realistic technical and behavioral interviews, generate role-specific questions, evaluate candidate answers, provide detailed feedback, analyze resumes, conduct voice-based interviews, defend projects, and track performance through personalized insights.
+
+### Core Capabilities
+
+- **AI-Powered Interview Generation** — Role-specific questions, experience-level customization, multiple interview types (Technical, Coding, System Design, Generative AI, HR/Behavioral, Mixed)
+- **AI Answer Evaluation** — Dynamic scoring, detailed feedback, strength/weakness analysis, actionable improvement recommendations
+- **Voice Interviews** — Speech recognition, transcript generation, answer editing, question replay
+- **Resume Intelligence** — PDF upload, text extraction, resume analysis, personalized question generation
+- **Project Defense** — Practice explaining projects under technical questioning (architecture, tech choices, scalability, challenges, trade-offs)
+- **Dashboard & Analytics** — Interview readiness, performance breakdown, recent interviews, quick actions
+- **Interview History** — Persistent storage of sessions with config, questions, answers, scores, feedback
+- **Performance Insights** — Multi-dimensional analysis (Technical Knowledge, Communication, Problem Solving, AI Knowledge, Completeness)
+- **Authentication** — JWT, bcrypt, 7-day tokens, cross-device synchronization
+- **Dual Persistence** — localStorage for guests, database for authenticated users
+
+### Technology Stack
+
+| Layer | Technologies |
+|-------|--------------|
+| **Frontend** | Next.js, React, TypeScript, Tailwind CSS, shadcn/ui |
+| **Backend** | Python, FastAPI, SQLModel |
+| **Auth** | JWT (HS256), bcrypt, Bearer tokens |
+| **AI** | OpenAI/GPT-based services |
+| **Voice** | Web Speech API |
+| **Database** | SQLite (dev), PostgreSQL/Supabase-ready |
+| **Deployment** | Vercel (frontend), FastAPI-compatible hosting |
+
+### Project Structure
+
+```
+InterviewIQ-AI/
+├── app/
+│   ├── auth/ (login, register)
+│   ├── dashboard/, practice/, voice-interview/, resume/, projects/, history/, insights/, settings/
+│   ├── components/ (TopBar, etc.)
+│   └── lib/ (api, auth, store)
+├── backend/
+│   ├── main.py, database.py, auth.py, requirements.txt
+│   └── routers/ (auth, interviews, resume)
+├── public/, package.json, README.md
+```
+
+### Quick Start
+
+```bash
+# Frontend
+npm install
+npm run dev          # http://localhost:3000
+
+# Backend
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload  # http://localhost:8000
+```
+
+### Environment Variables
+
+**Frontend (.env.local):**
+```
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
+
+**Backend:**
+```
+DATABASE_URL=sqlite:///./interviewiq.db
+SECRET_KEY=your-development-secret
+```
+
+### Architecture
+
+```
+USER → Next.js Frontend → REST API → FastAPI Backend → SQLModel → SQLite/PostgreSQL
+                        ↓
+              AI Interview Engine (Questions, Evaluation, Feedback)
+                        ↓
+              Dashboard / History / Insights
+```
+
+### Key Features in Detail
+
+**Interview Modes:** Technical, Coding, System Design, Generative AI, HR/Behavioral, Mixed
+
+**Evaluation Dimensions:** Technical Knowledge, Communication, Problem Solving, AI Knowledge, Completeness, Relevance, Clarity, Technical Depth
+
+**Voice Workflow:** AI Question → Candidate Speaks → Speech Recognition → Transcript → Review/Edit → Submit → AI Evaluation
+
+**Resume Workflow:** PDF Upload → Text Extraction → Analysis (Skills/Experience/Projects) → Personalized Questions
+
+**Project Defense Focus:** Architecture, Technology Choices, Implementation, AI Components, Data Flow, Design Decisions, Trade-offs, Challenges, Scalability, Security, Performance, Deployment, Limitations, Future Improvements
+
+**Authentication Flow:** Register → Create Account → Login → JWT Token → Authenticated API Requests → Persistent User Data
+
+### Deployment
+
+- **Frontend:** `npx vercel --prod` (configure `NEXT_PUBLIC_API_URL` in Vercel)
+- **Backend:** Deploy FastAPI to production hosting (configure `DATABASE_URL`, `SECRET_KEY`)
+- **Database:** PostgreSQL/Supabase for production
+
+### Security & Privacy
+
+- JWT authentication, bcrypt password hashing, Bearer-token API auth
+- Environment-variable configuration, production secret management
+- CORS configuration, file upload validation, size controls
+- Guest data stays browser-local; authenticated data persists server-side
+- HTTPS and secured database credentials recommended for production
+
+---
 
 ## Writing and learning archive
 
