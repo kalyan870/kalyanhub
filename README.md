@@ -47,6 +47,7 @@ Developed an AI-powered face recognition application using PCA, ANN, Python, Str
 
 | Project | Description | Links |
 | --- | --- | --- |
+| **AI Internship — Face Recognition (PCA + ANN)** | Python and Streamlit face-recognition application built during an AI internship using PCA eigenfaces and an artificial neural network. | [GitHub](https://github.com/kalyan870/FaceRecognition-PCA-ANN) |
 | **AI Resume + Job Matcher** | Extracts skills, scores candidates, matches roles, and identifies skill gaps. | [GitHub](https://github.com/kalyan870/AI-Resume-Job-Matcher-System) · [Demo](https://resume-insight-ai.netlify.app/) |
 | **FactGuard AI** | AI-assisted claim verification presented as clear results. | [GitHub](https://github.com/kalyan870/FactGuard-AI-Assisted-Claim-Verification) · [Demo](https://www.onspace.ai/ai-app-builder/9b42x5) |
 | **AI Projects Collection** | Browser Agent, Codebase Analyst, Multimodal Video QA, Alignment Lab, and Local AI Voice Assistant. | [GitHub](https://github.com/kalyan870/ai-projects) · [Demo](https://browser-agent-khaki.vercel.app/) |
