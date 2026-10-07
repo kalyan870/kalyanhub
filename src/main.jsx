@@ -58,7 +58,7 @@ function mergeGithubProjects(repositories) {
     const liveDemoNotIncluded = /\b(concept|not included|no executable|no runnable|not deployable)\b/i.test(repo.description || '');
     const stack = [...new Set([repo.language, ...(repo.topics || [])].filter(Boolean))].slice(0, 3);
     const updatedAt = repo.pushed_at || repo.updated_at;
-    return { ...project, desc: repo.description?.trim() || project.desc, stack: stack.length ? stack : project.stack, url: repo.html_url, demo: homepage || (liveDemoNotIncluded ? '' : project.demo), image: githubProjectImage(repo), updated: `GitHub · updated ${new Date(updatedAt).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' })}` };
+    return { ...project, desc: repo.description?.trim() || project.desc, stack: stack.length ? stack : project.stack, url: repo.html_url, demo: liveDemoNotIncluded ? '' : homepage || project.demo, image: githubProjectImage(repo), updated: `GitHub · updated ${new Date(updatedAt).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' })}` };
   });
   const excludedDescription = /\b(concept|showcase|legacy pointer|not included|not yet|no runnable|design notes|recorded demo)\b/i;
   const additional = repositories
