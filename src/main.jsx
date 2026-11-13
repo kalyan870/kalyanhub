@@ -144,11 +144,13 @@ const linkedinProfile = {
   focus: ['AI Engineering', 'Generative AI', 'LLM Applications', 'AI Agents', 'Python & APIs', 'Full-Stack Development'],
   github: 'https://github.com/kalyan870',
   linkedin: 'https://www.linkedin.com/in/saragadamkalyan/',
-  portfolio: 'https://kalyan-portfolio-one.vercel.app/',
+  portfolio: 'https://kalyannexus.vercel.app/',
   resume: 'https://www.linkedin.com/in/saragadamkalyan/details/featured/'
 };
 const linkedinExperience = [
-  { role: 'Artificial Intelligence Intern', company: 'Internship Studio', period: 'May 2026 — Present', type: 'Remote', desc: 'Developed an AI-powered face recognition application with PCA, ANN, Python, Streamlit, NumPy, Pandas, Matplotlib, and Scikit-learn. Built practical skills across data preprocessing, visualization, model evaluation, debugging, and deployment.' }
+  { role: 'Artificial Intelligence Intern', company: 'Internship Studio', period: '2026', type: 'Internship', desc: 'Built a face-recognition project using PCA and an artificial neural network, with a Python and Streamlit interface. See the linked repository for implementation details.' },
+  { role: 'AI/ML Intern', company: 'Codec Technologies', period: '2026', type: 'Internship', desc: 'Completed AI/ML internship work. Project-specific tools and outcomes are listed only where confirmed in the linked project repositories.' },
+  { role: 'AI & Full-Stack Developer', company: 'Independent projects', period: 'Ongoing', type: 'Project work', desc: 'Builds and publishes AI and web projects, with source repositories and live demos linked in the Projects section.' }
 ];
 
 function App() {
