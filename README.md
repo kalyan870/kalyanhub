@@ -23,10 +23,10 @@ Internship Â· 2026
 
 Built a face-recognition project using PCA and an artificial neural network, with a Python and Streamlit interface. See the linked repository for implementation details.
 
-**AI/ML Intern â€” Codec Technologies**
-Internship Â· 2026
+**Web Developer Intern - Codec Technologies India**
+Internship | May-Jun 2026 | Hyderabad, India
 
-Completed AI/ML internship work. Project-specific tools and outcomes are listed only where confirmed in the linked project repositories.
+Developed modular web components and worked on client-side state, REST API data bindings, responsive layouts, and cross-browser fixes using JavaScript, HTML, and CSS.
 
 **AI & Full-Stack Developer â€” Independent projects**
 Ongoing project work
