@@ -142,3 +142,10 @@ npm run preview
 This project is a personal portfolio and learning platform by Saragadam Kalyan.
 
 ![Profile views](https://komarev.com/ghpvc/?username=kalyan870&label=Profile%20views&color=f26b38&style=flat-square)
+
+## Architecture
+
+
+![kalyanhub architecture map](docs/images/kalyanhub-architecture.png)
+
+[Architecture notes](docs/architecture.md) · [Editable SVG](docs/images/kalyanhub-architecture.svg)
