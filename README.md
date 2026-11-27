@@ -38,6 +38,8 @@ Builds and publishes AI and web projects, with source repositories and live demo
 - **KalyanHub:** [kalyanhub.netlify.app](https://kalyanhub.netlify.app)
 - **Vercel deployment:** [kalyanhub.vercel.app](https://kalyanhub.vercel.app)
 - **Portfolio:** [kalyannexus.vercel.app](https://kalyannexus.vercel.app/)
+- **Portfolio V1:** [kalyan-portfolio-one.vercel.app](https://kalyan-portfolio-one.vercel.app/)
+- **Portfolio alternate:** [kalyanportfolio-five.vercel.app](https://kalyanportfolio-five.vercel.app/)
 - **LinkedIn:** [linkedin.com/in/saragadamkalyan](https://www.linkedin.com/in/saragadamkalyan/)
 - **GitHub:** [github.com/kalyan870](https://github.com/kalyan870)
 
@@ -98,6 +100,14 @@ Selected posts include **Generative AI Workshop completed**, **Google Cloud Gen 
 ## Demo
 
 https://github.com/kalyan870/kalyanhub/blob/main/KalyanHub-demo.mp4
+
+## Showcase and downloads
+
+KalyanHub includes a Showcase area for the standard Portfolio V1, full-screen Portfolio V2, selected live GitHub projects, conference films, and downloadable project references. Long media stays outside the frontend bundle and is published as individual GitHub Release assets.
+
+- [Open KalyanHub](https://kalyanhub.netlify.app)
+- [Browse individual project PDFs, PowerPoints, and final videos](https://github.com/kalyan870/kalyanhub/releases/tag/kalyanhub-showcase-2026-11)
+- [Browse the complete live GitHub repository archive](https://github.com/kalyan870?tab=repositories)
 
 ## Visual overview
 

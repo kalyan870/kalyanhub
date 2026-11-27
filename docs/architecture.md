@@ -25,6 +25,14 @@ Source-tree map; it describes tracked paths and does not claim a tested runtime 
 
 This documentation update does not add sign-in, a database, or file storage. Those belong only where the application has a verified account, durable relational-data, or persistent uploaded-file requirement. Review the application code and deployment settings before using private user data; this map is not a security audit.
 
+## Showcase and media delivery
+
+- The Showcase screen uses the same public GitHub repository sync as the Projects screen and displays portfolio links, selected repositories, and published work.
+- Portfolio preview images are static files under `public/showcase/` and are included in the website build.
+- Long MP4s and presentation files are hosted individually as GitHub Release assets. They are linked from the site rather than copied into the frontend bundle, keeping routine deployments small.
+- The individual repository presentation files remain separate release assets; the release page is the index for the full set.
+- The Showcase exposes external GitHub and LinkedIn links. It does not read or publish LinkedIn account content.
+
 ## Run and test
 
 Use the commands already documented in the [project README](../README.md). No setup or test command is invented here.

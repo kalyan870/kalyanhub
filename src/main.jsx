@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
+import Showcase from './Showcase.jsx';
 import { supabase } from './lib/supabase';
 
 const icons = {
@@ -154,7 +155,7 @@ const linkedinExperience = [
 ];
 
 function App() {
-  const [active, setActive] = useState('Dashboard');
+  const [active, setActive] = useState('Showcase');
   const [posts, setPosts] = useState(initialPosts);
   const [projectItems, setProjectItems] = useState(projects);
   const [githubUpdates, setGithubUpdates] = useState([]);
@@ -217,7 +218,7 @@ function App() {
   }, [syncGithubProjects]);
   useEffect(() => { if (!supabase) return; supabase.auth.getSession().then(({ data }) => setSession(data.session)); const { data: listener } = supabase.auth.onAuthStateChange((_event, nextSession) => setSession(nextSession)); return () => listener.subscription.unsubscribe(); }, []);
   useEffect(() => { localStorage.setItem('kalyanhub-theme', dark ? 'dark' : 'light'); localStorage.setItem('kalyanhub-saved', JSON.stringify(savedPosts)); localStorage.setItem('kalyanhub-liked', JSON.stringify(likedPosts)); localStorage.setItem('kalyanhub-public', String(publicProfile)); localStorage.setItem('kalyanhub-email', String(emailVisible)); localStorage.setItem('kalyanhub-digest', String(digest)); }, [dark, savedPosts, likedPosts, publicProfile, emailVisible, digest]);
-  const nav = [{ label: 'Dashboard', icon: icons.grid }, { label: 'Posts', icon: icons.post, count: posts.length + githubUpdates.length }, { label: 'Saved', icon: icons.save, count: savedPosts.length }, { label: 'Projects', icon: icons.project }, { label: 'Courses', icon: icons.course }, { label: 'Certificates', icon: icons.cert, count: certificates.length + githubCertificates.length }, { label: 'Profile', icon: icons.profile }, { label: 'Admin', icon: icons.admin }];
+  const nav = [{ label: 'Dashboard', icon: icons.grid }, { label: 'Posts', icon: icons.post, count: posts.length + githubUpdates.length }, { label: 'Saved', icon: icons.save, count: savedPosts.length }, { label: 'Projects', icon: icons.project }, { label: 'Showcase', icon: icons.play }, { label: 'Courses', icon: icons.course }, { label: 'Certificates', icon: icons.cert, count: certificates.length + githubCertificates.length }, { label: 'Profile', icon: icons.profile }, { label: 'Admin', icon: icons.admin }];
   const filteredPosts = useMemo(() => posts.filter(p => `${p.title} ${p.excerpt} ${p.tags.join(' ')}`.toLowerCase().includes(query.toLowerCase())), [posts, query]);
   const toggleSave = (id) => setSavedPosts(current => current.includes(id) ? current.filter(item => item !== id) : [...current, id]);
   const toggleLike = (id) => setLikedPosts(current => current.includes(id) ? current.filter(item => item !== id) : [...current, id]);
@@ -237,6 +238,7 @@ function App() {
       {active === 'Posts' && <Posts posts={filteredPosts} githubUpdates={githubUpdates} setModal={setModal} notify={notify} savedPosts={savedPosts} likedPosts={likedPosts} toggleSave={toggleSave} toggleLike={toggleLike} onOpen={setSelectedPost} />}
       {active === 'Saved' && <Saved posts={posts.filter(p => savedPosts.includes(p.id))} setActive={setActive} notify={notify} savedPosts={savedPosts} likedPosts={likedPosts} toggleSave={toggleSave} toggleLike={toggleLike} onOpen={setSelectedPost} />}
       {active === 'Projects' && <Projects projects={projectItems} githubSync={githubSync} onRefresh={() => syncGithubProjects(true)} notify={notify} setSelectedProject={setSelectedProject} />}
+      {active === 'Showcase' && <Showcase projects={projectItems} />}
       {active === 'Courses' && <Courses notify={notify} setSelectedCourse={setSelectedCourse} />}
       {active === 'Certificates' && <Certificates items={[...certificates, ...githubCertificates]} setModal={setModal} notify={notify} onOpen={setSelectedCertificate} />}
       {active === 'Profile' && <Profile setModal={setModal} notify={notify} />}
